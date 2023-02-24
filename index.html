@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <script src="https://kit.fontawesome.com/0a04953880.js" crossorigin="anonymous"></script>
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0" nonce="wLvSXEsn"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
+        nonce="wLvSXEsn"></script>
     <title>POWER</title>
 </head>
 
@@ -23,7 +25,11 @@
             </div>
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <div class="header__notification">
+                    <h3>Sản phẩm chưa có trong giỏ hàng</h3>
+                </div>
             </div>
+          
         </div>
         <div class="head-nav">
             <div class="header-wrapper">
@@ -39,11 +45,28 @@
                 <div class="wrapper">Liên Hệ</div>
                 <div class="wrapper">Hệ Thống Cửa Hàng</div>
             </div>
-
         </div>
     </header>
-    <div class="photo">
-        <img src="img/banner.jpg" alt="">
+    <div class="slideshow-container">
+        <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+        <div class="mySlides fade">
+            <img src="img/banner.jpg"
+                style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+            <img src="img/banner2.jpg"
+                style="width:100%">
+
+        </div>
+        <div class="mySlides fade">
+            <img src="img/banner3.jpg"
+                style="width:100%">
+
+        </div>
+        <!-- Nút điều khiển mũi tên-->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
     <h2 class="spbc">SẢN PHẨM BÁN CHẠY</h2>
     <div class="sanpham">
@@ -51,18 +74,22 @@
             <div> <img src="img/pin1.jpg" alt=""></div>
             <h4 class="spbanchay">Pin dự phòng Anker PowerCore+ 10050 – A1310</h4>
             <h4 class="price">1,320,000 đ</h4>
+            <button>aa</button>
         </div>
         <div class="sp1"><img src="img/pin2.jpg" alt="">
             <h4 class="spbanchay">Bao Da Pin Dự Phòng Anker 10050 – A7096081</h4>
             <h4 class="price">390,000 đ</h4>
+            <button>aa</button>
         </div>
         <div class="sp1"><img src="img/pin3.jpg" alt="">
             <h4 class="spbanchay">Túi đựng Pin Dự Phòng Anker PowerCore 20000 – A7311</h4>
             <h4 class="price">1,580,000 đ</h4>
+            <button>aa</button>
         </div>
         <div class="sp1"><img src="img/pin4.png" alt="">
             <h4 class="spbanchay">Sạc Anker PowerPort Speed 1 USB-C, 30w – A2014</h4>
             <h4 class="price">1,680,000 đ</h4>
+            <button>aa</button>
         </div>
     </div>
     <div class="banner">
@@ -73,10 +100,12 @@
     <div class="sanphammoi">
         <h2 class="spbc">Sản phẩm mới</h2>
         <div class="sanpham">
+
             <div class="sp1">
                 <div> <img src="img/a1310012_td01_bao_da_grande.png" alt=""></div>
                 <h4 class="spbanchay">Pin dự phòng Anker PowerCore 20100 – A1271</h4>
                 <h4 class="price">1,390,000 đ</h4>
+                <button>aa</button>
             </div>
             <div class="sp1"><img src="img/upload_5198d14188c542dc874acec105dcf1f4_grande.jpg" alt="">
                 <h4 class="spbanchay">Pin dự phòng Anker PowerCore 13000 – A1215</h4>
@@ -110,21 +139,22 @@
         <div class="footerr">
             <div class="fott">
                 <div class="footerr-son1">
-                    <h3 >Trung Tâm Phân Phối & Bảo Hành</h3>
+                    <h3>Trung Tâm Phân Phối & Bảo Hành</h3>
                     <p><i class="fa-solid fa-house" style="color: black;"></i>Hà Nội </p>
                     <p><i class="fa-solid fa-right-long"></i>319 C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM</p>
                     <p><i class="fa-sharp fa-solid fa-phone"></i>Hotline: 1900 636 648</p>
-                    <p><i class="fa-sharp fa-solid fa-phone"></i>Bảo hành tại Hà Nội: 1900 636 648 (Máy lẻ 101)</p> 
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>Bảo hành tại Hà Nội: 1900 636 648 (Máy lẻ 101)</p>
                     <p><i class="fa-sharp fa-solid fa-phone"></i>Liên hệ bán buôn/ Dự án tại miền Bắc: 1900 636 648</p>
                     <p><i class="fa-solid fa-house" style="color: black;"></i>Sài Gòn:</p>
                     <p>319 C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM</p>
                     <p>* Giờ mở cửa: 09h00 - 17h00 (từ thứ 2 đến thứ 7)</p>
-                    <p>* Liên hệ bảo hành sau 17h00 thì liên hệ trước qua điện thoại và không nhận bảo hành sản phẩm mà yêu cầu kiểm tra tại chỗ</p>
+                    <p>* Liên hệ bảo hành sau 17h00 thì liên hệ trước qua điện thoại và không nhận bảo hành sản phẩm mà
+                        yêu cầu kiểm tra tại chỗ</p>
                     <p>* Liên hệ mua hàng sau 17h00 thì đến cứ nhấn chuông.</p>
                     <p><i class="fa-sharp fa-solid fa-phone"></i>Hotline: 1900 636 648</p>
                     <p><i class="fa-sharp fa-solid fa-phone"></i>Liên hệ bán buôn / Dự án tại miền Nam: 1900 636 648</p>
                 </div>
-                
+
                 <div class="footerr-son2">
                     <h4>Thông Tin</h4>
                     <ul class="menu">
@@ -147,7 +177,12 @@
                         <li><a href="">Tài khoản ngân hàng</a></li>
                 </div>
                 <div class="footerr-son4">
-                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline"
+                        data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                        data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                    </div>
                 </div>
             </div>
 
@@ -157,6 +192,32 @@
                 <h3> © Bản quyền thuộc về Huy lê</h3>
             </div>
         </footer>
-</body>
+        <!-- <script>
+            var products = [
+                {
+                    id: 1,
+                    img: 'img/a1310012_td01_bao_da_grande.png',
+                    title: 'Pin dự phòng Anker PowerCore 20100 – A1271',
+                    price: '1,320,000 đ'
+                },
+                {
+                    id: 2,
+                    img: 'img/a1310012_td01_bao_da_grande.png',
+                    title: 'Pin dự phòng Anker PowerCore 20100 – A1271',
+                    price: '320,000 đ'
+                },
+                {
+                    id: 3,
+                    img: 'img/a1310012_td01_bao_da_grande.png',
+                    title: 'Pin dự phòng Anker PowerCore 20100 – A1271',
+                    price: '400,000 đ'
+                }
+            ]
 
+            products.map(item => {
+                return item.img
+            })
+        </script> -->
+</body>
+<script src="main.js"></script>
 </html>
