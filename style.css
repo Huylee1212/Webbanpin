@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -33,30 +34,53 @@ body {
     padding: 26px 40px 25px 50px;
     cursor: pointer;
 }
+.cart-item img{
+    width: 50px;
+    height: 50px;
+}
+.cart-box-mini{
+    display: flex;
+    padding: 5px;
+    font-weight: 700;
+    align-items: center;
+
+}
 
 .header__notification {
-    display: none;
+    /* display: none; */
+    width: 400px;
+    height: 400px;
     padding: 30px;
     position: absolute;
     margin-left: -250px;
     background-color: #f3f3f3;
     border-radius: 5px;
     margin-top: 15px;
-    z-index: 1;
-    
+    max-height: 528px;
+    overflow-x:hidden ; 
+
 }
-.header__notification::before{
-    z-index: -2;
+
+.cart-price {
+    width: 100%; 
+    bottom: 0;
+    right: 0;
+
+}
+.cart-box-mini .cart-price{
+    padding-left: 50px;
+}
+
+/* .header__notification::before {
     content: "";
-    border: 20px solid #f3f3f3;
+    border: 20px solid;
+    border-color: transparent transparent #f3f3f3 transparent;
     position: absolute;
     right: 50px;
-    top: 0;
-    top:-5px;
-    transform: rotate(45deg);
+    bottom: 70px;
 
-    
-}
+
+} */
 
 .cart-item:hover .header__notification {
     display: block;
@@ -181,6 +205,12 @@ img:hover {
 
 }
 
+/* body */
+.body{
+    min-height: 60vh;
+}
+
+/* chaan trang */
 .footerr {
     background-color: #00a4e0;
     display: flex;
@@ -268,58 +298,101 @@ i {
 
 /* 
 ------------------ */
-* {box-sizing:border-box}
+* {
+    box-sizing: border-box
+}
+
 /* thiết lập style cho slideshow container */
- .slideshow-container {
-   max-width: 100%;
-   position: relative;
-   margin: auto;
- }
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
 /* ẩn hình ảnh cho phần tử slideshow */
- .mySlides {
-   display: none;
- }
+.mySlides {
+    display: none;
+}
+
 /* thiết kế nút mũi tên*/
- .prev, .next {
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   width: auto;
-   margin-top: -22px;
-   padding: 16px;
-   color: white;
-   font-weight: bold;
-   font-size: 18px;
-   transition: 0.6s ease;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
- }
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
 /* thiết kế nút mũi tên next nằm phía bên phải */
- .next {
-   right: 0;
-   border-radius: 3px 0 0 3px;
- }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
 /* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
- .prev:hover, .next:hover {
-   background-color: rgba(0,0,0,0.8);
- }
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
-.active, .dot:hover {
-   background-color: #717171;
- }
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
 /* tạo hiệu ứng chuyển động fade */
- .fade {
-   -webkit-animation-name: fade;
-   -webkit-animation-duration: 1.5s;
-   animation-name: fade;
-   animation-duration: 1.5s;
- }
-@-webkit-keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
-@keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+.cart-box{
+    pointer-events: none;
+    font-size: medium;
+}
+
+.test{
+    display: grid;
+    grid-template-columns: 1;
+    
+}
+.header__notification_none{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.btn{
+    display: flex;
+    padding: 2px;
+    
+}
