@@ -47,7 +47,7 @@ body {
 }
 
 .header__notification {
-    /* display: none; */
+    display: none;
     width: 400px;
     height: 400px;
     padding: 30px;
@@ -392,9 +392,9 @@ i {
     padding: 10px;
 }
 .btn{
-    padding: 2px;
+    padding: 3px;
     /* display: inline-block; */
-    background-color: rgb(72, 159, 174);
+    background-color:rgb(194 208 213);
     border-radius: 5px;
     display: flex;
     margin-left: 70px;
