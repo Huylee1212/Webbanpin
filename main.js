@@ -48,7 +48,7 @@ function showListCart() {
   for (let i = 0; i < listProduct.length; i++) {
     item.innerHTML += `
     <div class="cart-box-mini">
-      <div> <img class="cart-img" src="${listProduct[i].anh} " alt=""></div>
+      <div> <img class="cart-img" style=" pointer-events: none;" src="${listProduct[i].anh} " alt=""></div>
       <h4 class="cart-sanpham">"${listProduct[i].spbanchay}</h4>
       <h4 class="cart-price"  >${listProduct[i].price}</h4>
       <button style="font-size: 18px; color: brown; margin-left: 10px;" onClick = handleDelete(${listProduct[i].id})>Xoá</button>     

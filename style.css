@@ -392,7 +392,10 @@ i {
     padding: 10px;
 }
 .btn{
-    display: flex;
     padding: 2px;
-    
+    /* display: inline-block; */
+    background-color: rgb(72, 159, 174);
+    border-radius: 5px;
+    display: flex;
+    margin-left: 70px;
 }
