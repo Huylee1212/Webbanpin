@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> -->
     <script src="https://kit.fontawesome.com/0a04953880.js" crossorigin="anonymous"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <header class="header">
         <div class="masthead-head">
             <img src="img/logo-mona2.png" alt="">
@@ -26,15 +27,24 @@
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <div class="header__notification">
-                    <h3 id="header__notification_none">Sản phẩm chưa có trong giỏ hàng</h3>
+                    <div class="content-cart-item">
+                        <h3 class="header__notification_none">Sản phẩm chưa có trong giỏ hàng</h3>
+                    </div>
+                    <button class="header__notification__THANHTOAN" style="border-radius: 3px;
+                    cursor: pointer;
+                    padding: 5px;
+                    background-color: #00a4e0;
+                    position: absolute;
+                    right: 30px;
+                    bottom: 30px;" > <a href="ThanhToan/index.html">THANH TOÁN</a> </button>
                 </div>
-            </div>
 
-            <!-- <div class="test">
-                <img src="img/pin1.jpg" alt="">
-                    <h4 class="spbanchay">Pin dự phòng Anker PowerCore+ 10050 – A1310</h4>
-                    <h4 class="price">1,320,000 đ</h4>
-            </div> -->
+            </div>
+            <div class="login">
+                <a href="LoGin/dangnhap.html" class="login_a">ĐĂNG NHẬP/</a>
+                <a href="LoGin/dangki.html" class="login_a">ĐĂNG KÍ</a>
+            </div>
+            
 
         </div>
         <div class="head-nav">
@@ -73,12 +83,13 @@
     </div>
     <h2 class="spbc">SẢN PHẨM BÁN CHẠY</h2>
     <div class="sanpham">
-        <div class="sp1">      
+        <div class="sp1">
             <img src="img/pin1.jpg" alt="">
             <h4 class="spbanchay">Pin dự phòng Anker PowerCore+ 10050 – A1310</h4>
             <h4 class="price">1,320,000 đ</h4>
             <button class="btn"> Thêm Vào Giỏ Hàng </button>
         </div>
+
         <div class="sp1"><img src="img/pin2.jpg" alt="">
             <h4 class="spbanchay">Bao Da Pin Dự Phòng Anker 10050 – A7096081</h4>
             <h4 class="price">390,000 đ</h4>
