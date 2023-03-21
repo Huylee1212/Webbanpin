@@ -8,12 +8,14 @@
     <title>LoGin</title>
 </head>
 <body>
-    <form method="post" action="#" class="box">
+    <form method="post" action="#" class="box"  onsubmit="dangki()">
         <H1>ĐĂNG KÍ TÀI KHOẢN</H1>
-        <input type="text" placeholder="Điền thông tin tài khoản">
-        <input type="password" placeholder="Điền mật khẩu">
-        <input type="password" placeholder="Điền mật khẩu">
-        <input type="submit" value="ĐĂNG KÍ">
+        <input id="username" type="text" placeholder="Tên của bạn">
+        <input id="email" type="text" placeholder="Điền tài khoản email">
+        <input  id="pass" type="password" placeholder="Điền mật khẩu">
+        <input  id="pass" type="password" placeholder="Điền lại mật khẩu">
+        <button id="btnsignup" class="btn">ĐĂNG KÍ</button>
  </form>
 </body>
+<script src="login.js"></script>
 </html>
