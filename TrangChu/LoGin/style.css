@@ -34,7 +34,7 @@ html, body{
     border-color: rgb(165, 34, 126);
     transition: 1s;
 }
-.box input[type="submit"]{
+.btn{
     background: none;
     outline: none;
     width: 160px;
@@ -46,7 +46,7 @@ html, body{
     font-size: 18px;
     transition: 1s;
 }
-.box input[type="submit"]:hover{
+.btn{
     background: #62d1d5;
     transition: 1s;
 }
