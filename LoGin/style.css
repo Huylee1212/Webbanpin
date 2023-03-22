@@ -46,7 +46,8 @@ html, body{
     font-size: 18px;
     transition: 1s;
 }
-.btn{
+.btn:hover{
     background: #62d1d5;
     transition: 1s;
+    cursor: pointer;
 }
