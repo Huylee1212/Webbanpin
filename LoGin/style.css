@@ -18,7 +18,7 @@ html, body{
 .box h1{
     color: #fff;
 }
-.box input[type="password"], .box input[type="text"]{
+.box input[type="email"], .box input[type="password"], .box input[type="text"]{
     background: none;
     outline: none;
     width: 210px;

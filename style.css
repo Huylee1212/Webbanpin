@@ -48,7 +48,7 @@ body {
 }
 
 .header__notification {
-    /* display: none; */
+    display: none;
     width: 400px;
     height: 400px;
     padding: 30px;
@@ -419,4 +419,7 @@ i {
     display: flex;
     margin-left: 70px;
     cursor: pointer;
+}
+.logOut:hover {
+    color: #00a4e0;
 }
