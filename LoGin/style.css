@@ -29,7 +29,7 @@ html, body{
     border: solid 2px #002cff;
     transition: 1s;
 }
-.box input[type="password"]:focus, .box input[type="text"]:focus{
+.box input[type="password"]:focus, .box input[type="text"]:focus , .box input[type="email"]:focus{
     width: 320px;
     border-color: rgb(165, 34, 126);
     transition: 1s;

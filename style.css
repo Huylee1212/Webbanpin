@@ -11,7 +11,7 @@ body {
 .masthead-head img {
     width: 170px;
     height: 80px;
-    margin-left: 11%;
+    margin: 0 5% 0 11%;
 }
 
 .masthead-head {
@@ -19,15 +19,37 @@ body {
     display: flex;
 }
 
+.search-wrapper {
+    width: 30%;
+    position: relative;
+}
+
+#results {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: white;
+    border: 1px solid #333;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    display: none;
+    
+}
+
 .search {
     margin-top: 15px;
-    margin-left: 10%;
     border-color: rgba(0, 0, 0, 0.09);
     border-radius: 99px;
     padding: 20px;
-    width: 30%;
+    width: 100%;
     height: 1.50em;
 }
+
+ul{
+    list-style: none;   
+}
+
 
 .main_header,
 .cart-item,
@@ -61,7 +83,7 @@ body {
 }
 
 .content-cart-item {
-    overflow-x:hidden ;    
+    overflow-y:scroll ;    
     height: 264px;
 }
 /* .header__notification__THANHTOAN{
@@ -148,6 +170,7 @@ body {
     display: flex;
     padding: 10px 20px;
     justify-content: center;
+    flex-wrap: wrap;
 
 
 }
@@ -156,11 +179,12 @@ body {
     width: 20%;
     margin: 20px;
     margin-top: -20px;
+    
 }
 
 .sp1 img {
     width: 90%;
-
+    
 }
 
 img:hover {

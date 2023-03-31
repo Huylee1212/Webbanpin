@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0a04953880.js" crossorigin="anonymous"></script>
     <title>ĐĂNG KÍ</title>
 </head>
+
 <body>
     <form method="post" action="#" class="box" onsubmit="dangki()">
         <H1>ĐĂNG KÍ TÀI KHOẢN</H1>
-        <input id="username" type="text" placeholder="Điền tên của bạn">
-        <input id="email" type="email" placeholder="Điền email của bạn">
-        <input id="password" type="password" placeholder="Điền mật khẩu">
-        <input id="password2" type="password" placeholder="Điền mật khẩu">
+        
+        <div> <i class="fa-solid fa-user"></i>
+            <input  id="username" type="text" placeholder="Điền tên của bạn">
+        </div>
+        <div>
+            <i class="fa-solid fa-at"></i>
+            <input id="email" type="email" placeholder="Điền email của bạn">
+        </div>
+        <div>
+            <i class="fa-solid fa-lock"></i>
+            <input id="password" type="password" placeholder="Điền mật khẩu">
+        </div>
+        <div>
+            <i class="fa-solid fa-lock"></i>
+            <input id="password2" type="password" placeholder="Điền mật khẩu">
+        </div>
         <button class="btn">ĐĂNG KÍ</button>
- </form>
+    </form>
 </body>
 <script src="main.js"></script>
+
 </html>

@@ -52,9 +52,8 @@ function addProduct(id) {
   showListCart() //gọi hàm để hiển thị sản phẩm
 }
 
-
 //danh sach tat ca san pham
-let getAllProducts = [
+var getAllProducts = [
   {
       id: 0,
       newProduct: true,
@@ -78,21 +77,57 @@ let getAllProducts = [
   },
   {
     id: 3,
-    img: 'img/a1310012_td01_bao_da_grande.png',
-    title: 'Pin dự phòng Anker PowerCore 20100 – A1271',
+    newProduct: true,
+    img: 'img/upload_5198d14188c542dc874acec105dcf1f4_grande.jpg',
+    title: 'Pin dự phòng Anker PowerCore 2023 – A1271',
     price: '400,000 đ'
-  }
+  },
+  {
+    id: 4,
+    newProduct: true,
+    img: 'img/upload_e1501c9edd204e4ba2a62e4bcbc1649c_grande.jpg',
+    title: 'Pin dự phòng Anker PowerCore 2192 – A1271',
+    price: '500,000 đ'
+  },
+  {
+    id: 5,
+    newProduct: false,
+    img: 'img/pin_20du_20phong_20anker_2010050_20-_20vang_1d79ab6e8e0c4d4199603da1bb653c03_grande.jpg',
+    title: 'Pin dự phòng Anker PowerCore 2192 – A1271',
+    price: '500,000 đ'
+  },
+
 ]
 
-
-
-
-//logic tim kiem
-console.log(
-  getAllProducts.map(product => {
-    return product.title.toLocaleLowerCase().includes('A1271'.trim().toLocaleLowerCase())
+//tìm kiếm
+let newArr = []
+function handleSearch(value){
+  newArr = getAllProducts.filter(product => {
+    return product.title.toLocaleLowerCase().includes(value.trim().toLocaleLowerCase())
   })
-);
+
+  let listResult = document.getElementById('results')
+  if(value == '') {
+    newArr=[]
+  }
+  listResult.innerHTML = ``
+  for (let i = 0; i < newArr.length; i++) {
+    listResult.innerHTML += `
+    <div class="search_all" style=" display: flex; margin-left:-43px; ">
+    <img class="cart-img" style=" pointer-events: none;   width: 50px;
+    height: 50px; " src="${newArr[i].img}" alt=""> 
+      <li style="padding: 10px 0.75em; ">${newArr[i].title}</li>
+      </div>
+    `    
+  }
+  document.getElementById("results").style.display = "block";
+  if(value == '') {
+    document.getElementById("results").style.display = "none";
+  }
+}
+  
+
+
 
 //Xoa san pham
 function handleDelete(id) {
@@ -127,6 +162,7 @@ function showNewProduct () {
 //hien thi danh sach san pham
 function showProduct () {
   const products = document.querySelector('.all-product')
+  products.innerHTML= ''
   for (let i = 0; i < getAllProducts.length; i++) {
     products.innerHTML += `
       <div class="sp1" ${getAllProducts[i].id}>
