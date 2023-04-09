@@ -14,21 +14,21 @@
     <title>POWER</title>
 </head>
 
-<body>
-
+<body >
     <header class="header">
         <div class="masthead-head">
             <img src="img/logo-mona2.png" alt="">
             <!-- <input type="text" id="searchBox" placeholder="Search...">
                 <button id="searchBtn">Search</button> -->
             <div class="search-wrapper">
-                <input type="text" placeholder="Search.." class="search" oninput="handleSearch(this.value)" >
+                <input type="text" placeholder="Search.." class="search" onclick=" offSearch()"
+                    oninput="handleSearch(this.value)">
                 <ul id="results">
                 </ul>
-              
+
             </div>
             <div class="hienthi">
-                    
+
             </div>
             <div class="main_header">
                 <i class="phone"><i class="fa-solid fa-phone"></i></i>
@@ -38,9 +38,19 @@
             <div class="cart-item">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <div class="header__notification">
+                    <!-- <div class="ttsp">
+                        <div class="ttsp"><h4>Tên Sản Phẩm</h4></div>
+                        <div class="ttsp"><h4>Giá</h4></div>
+                        <div class="ttsp"><h4>Số Lượng</h4></div>
+                        <div class="ttsp"><h4>Số Tiền</h4></div>
+                    </div> -->
                     <div class="content-cart-item">
+
                         <h3 class="header__notification_none">Sản phẩm chưa có trong giỏ hàng</h3>
                     </div>
+                    <!-- <h3 style=" position: absolute;
+                    right: 158px;
+                    bottom: 63px;" >Tổng Tiền </h3>  -->
                     <button class="header__notification__THANHTOAN" style="border-radius: 3px;
                     cursor: pointer;
                     padding: 5px;
@@ -52,8 +62,8 @@
 
             </div>
             <div class="login"></div>
-
             
+
         </div>
         <div class="head-nav">
             <div class="header-wrapper">

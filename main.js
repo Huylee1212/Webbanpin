@@ -31,25 +31,28 @@ function showListCart() {
         <h4 class="cart-sanpham">"${listProduct[i].title}</h4>
         <h4 class="cart-price"  >${listProduct[i].price}</h4>
         <button style="font-size: 18px; color: brown; margin-left: 10px;" onClick = handleDelete(${listProduct[i].id})>Xoá</button>         
-      </div>
-
+      </div> 
+      
   `
   }
+
+ 
 }
 // add cart
 let listProduct = [] //list chứa sản phẩm trong gio hang
 
 //Thêm sản phẩm vào giỏ hàng
 function addProduct(id) {
-    const newProduct = {
+    var newProduct = {
       id: Math.random(),
       title: getAllProducts[id].title,
       img: getAllProducts[id].img,
       price: getAllProducts[id].price
     }
-
   listProduct.push(newProduct) //đẩy sản phẩm vào mảng
   showListCart() //gọi hàm để hiển thị sản phẩm
+  localStorage.setItem('Spadd',JSON.stringify(listProduct))
+ 
 }
 
 //danh sach tat ca san pham
@@ -99,34 +102,33 @@ var getAllProducts = [
 
 ]
 
-//tìm kiếm
-let newArr = []
-function handleSearch(value){
-  newArr = getAllProducts.filter(product => {
-    return product.title.toLocaleLowerCase().includes(value.trim().toLocaleLowerCase())
-  })
-
-  let listResult = document.getElementById('results')
-  if(value == '') {
-    newArr=[]
-  }
-  listResult.innerHTML = ``
-  for (let i = 0; i < newArr.length; i++) {
-    listResult.innerHTML += `
-    <div class="search_all" style=" display: flex; margin-left:-43px; ">
-    <img class="cart-img" style=" pointer-events: none;   width: 50px;
-    height: 50px; " src="${newArr[i].img}" alt=""> 
-      <li style="padding: 10px 0.75em; ">${newArr[i].title}</li>
-      </div>
-    `    
-  }
-  document.getElementById("results").style.display = "block";
-  if(value == '') {
-    document.getElementById("results").style.display = "none";
-  }
-}
+  //tìm kiếm
+  let newArr = []
+  function handleSearch(value) {
+    newArr = getAllProducts.filter(product => {
+      return product.title.toLocaleLowerCase().includes(value.trim().toLocaleLowerCase())
+    })
   
-
+    let listResult = document.getElementById('results')
+    if (value == '') {
+      newArr = []
+    }
+    listResult.innerHTML = ``
+    for (let i = 0; i < newArr.length; i++) {
+      listResult.innerHTML += `
+      <div class="search_all" style=" display: flex; margin-left:-43px; ">
+      <img class="cart-img" style=" pointer-events: none;   width: 50px;
+      height: 50px; " src="${newArr[i].img}" alt=""> 
+        <li style="padding: 10px 0.75em; ">${newArr[i].title}</li>
+        </div>
+      `
+    }
+    document.getElementById("results").style.display = "block";
+  
+    if (value == '' ) {
+      document.getElementById("results").style.display = "none";
+    }
+  }
 
 
 //Xoa san pham
@@ -171,6 +173,7 @@ function showProduct () {
         <h4 class="price">${getAllProducts[i].price}</h4>
         <button class="btn" onclick="addProduct(${getAllProducts[i].id})"> Thêm Vào Giỏ Hàng </button>
     </div>
+    
     `    
   }
 }
@@ -200,3 +203,7 @@ main()
 
 
 
+
+
+
+  
